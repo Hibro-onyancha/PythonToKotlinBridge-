@@ -33,6 +33,7 @@ def generate_service_data(num_services, center_location, radius_km):
         services.append(service)
     return services
 
+
 center_location = {
     "longitude": 34.8244991,
     "latitude": -0.8237814
