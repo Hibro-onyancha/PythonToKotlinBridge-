@@ -70,6 +70,7 @@ def generate_product_data(num_products, radius, reference_location):
             "likes": random.randint(0, 100),
             "diLikes": random.randint(0, 100),
             "comments": random.randint(0, 50),
+            "flags": random.randint(0, 50),
             "cartAdds": random.randint(0, 50)
         }
         products.append(product)
