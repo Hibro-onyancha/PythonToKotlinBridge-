@@ -30,7 +30,9 @@ def kotlin_data_class_to_json(kotlin_class: str) -> str:
             json_dict[prop_name] = False
         elif prop_type.startswith("List<") and prop_type.endswith(">"):
             inner_type = prop_type[5:-1]  # Extract inner type from List<>
-            if inner_type not in ["String", "Int", "Long", "Double", "Float", "Boolean"]:
+            if "listOf" in default_value:
+                json_dict[prop_name] = []
+            elif inner_type not in ["String", "Int", "Long", "Double", "Float", "Boolean"]:
                 json_dict[prop_name] = []
             else:
                 json_dict[prop_name] = []
