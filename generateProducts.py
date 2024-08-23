@@ -41,9 +41,10 @@ def generate_product_data(num_products, radius, reference_location):
         location = generate_location(reference_location, radius)
         product = {
             "id": str(ObjectId()),
-            "shopId": str(ObjectId()),
+            "shopId": "245",
             "dateUpdated": "2024-08-08T00:00:00Z",
             "name": f"Product_{_+1}",
+            "category":"pasta",
             "price": random.randint(100, 1000),
             "soldItems": random.randint(0, 100),
             "remainingItems": random.randint(0, 100),
